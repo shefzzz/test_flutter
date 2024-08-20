@@ -47,7 +47,7 @@ class _homenavState extends State<homenav> {
           BottomNavigationBarItem(icon: Icon(Icons.looks_one_rounded), label: "Task1"),
           BottomNavigationBarItem(icon: Icon(Icons.looks_two_rounded), label: "task2"),
           BottomNavigationBarItem(icon: Icon(Icons.grid_4x4), label: "gridview"),
-          BottomNavigationBarItem(icon: Icon(Icons.calculategi), label: "textfield"),
+          BottomNavigationBarItem(icon: Icon(Icons.calculate), label: "textfield"),
         ],
       ),
 
