@@ -8,21 +8,11 @@ class task2 extends StatefulWidget {
 }
 
 class _task2State extends State<task2> {
-  static int index=1;
-
-
-
-
+  static int index = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "slider"
-        ),
-      ),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,72 +22,28 @@ class _task2State extends State<task2> {
                 width: 300,
                 height: 300,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(25),
-                  image: DecorationImage(
-                    image: AssetImage("assets/$index.jpg"),
-                    fit: BoxFit.cover,
-                  )
-                ),
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(25),
+                    image: DecorationImage(
+                      image: AssetImage("assets/$index.jpg"),
+                      fit: BoxFit.cover,
+                    )),
               ),
             ),
             SizedBox(
               height: 25,
             ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
               children: [
-               GestureDetector(
-                 onTap: (){
-                   setState(() {
-                     if(index>1)
-                       index--;
-                     else
-                       index=4;
-                   });
-                 },
-                 child: Container(
-                   width: 70,
-                   height: 70,
-                   decoration: BoxDecoration(
-                     color: Colors.blue,
-                     shape: BoxShape.circle,
-
-                   ),
-                   child: Icon(
-                     Icons.arrow_circle_left_sharp,
-                     size: 60,
-
-                   ),
-
-                 ),
-               ),
-                Container(
-                  width: 70,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(15),
-
-                  ),
-                  child: Icon(
-                    Icons.pause,
-                    size: 60,
-
-                  ),
-
-                ),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
-                      if(index<4)
-                        index++;
+                      if (index > 1)
+                        index--;
                       else
-                        index=1;
+                        index = 4;
                     });
-
                   },
                   child: Container(
                     width: 70,
@@ -105,23 +51,52 @@ class _task2State extends State<task2> {
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       shape: BoxShape.circle,
-
+                    ),
+                    child: Icon(
+                      Icons.arrow_circle_left_sharp,
+                      size: 60,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(
+                    Icons.pause,
+                    size: 60,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      if (index < 4)
+                        index++;
+                      else
+                        index = 1;
+                    });
+                  },
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      shape: BoxShape.circle,
                     ),
                     child: Icon(
                       Icons.arrow_circle_right_sharp,
                       size: 60,
-
                     ),
-
                   ),
                 ),
               ],
             )
-
           ],
         ),
       ),
-
     );
   }
 }

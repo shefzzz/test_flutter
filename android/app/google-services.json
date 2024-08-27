@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443417237800",
+    "project_id": "ict-hub-test",
+    "storage_bucket": "ict-hub-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443417237800:android:b2fc159e08ccbb098d181d",
+        "android_client_info": {
+          "package_name": "com.example.test_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqzrQytt1I2Hiz3FRjoGLAmQjIxopbC4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
